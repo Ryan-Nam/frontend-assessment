@@ -59,7 +59,7 @@ nav a.router-link-exact-active:hover {
 }
 
 .contact-info a {
-  color: var(--color-text);
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -69,7 +69,7 @@ nav a.router-link-exact-active:hover {
 
 @media (min-width: 1024px) {
   header {
-    padding-right: 0; /* Centered content */
+    padding-right: 0;
   }
 
   nav {
