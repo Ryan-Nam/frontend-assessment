@@ -1,40 +1,31 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
 
-Exercise 1
----
-Build a responsive page based on the designs.
+# Frontend Assessment Project
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+## Introduction
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+Firstly, thank you for the opportunity to participate in this frontend assessment. Through adhering to the provided coding guidelines, I've gained valuable insights and skills. The application of BEM, camelCase, and the focus on reusability not only enhanced my coding proficiency but also highlighted the importance of these practices in improving work efficiency and readability in a team setting. Using a consistent style ensures that the code is independent and doesn't interfere with other segments, making it easier to use reusable classes for additional coding.
 
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
+## Key Features
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+- **Coding Standards**: Followed strict coding guidelines for better readability and maintainability.
+- **BEM Syntax**: Used for custom CSS classes, improving the scalability and reusability of styles.
+- **camelCase Naming**: Adopted for JavaScript variables and functions for consistency with JavaScript conventions.
+- **Bootstrap 4.4.1 Integration**: Utilized mainly for layout and spacing, following Bootstrap's best practices.
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+## Bonus Point Explanation
 
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+- **Why 'banana'?**: The expression `('b' + 'a' + + 'a' + 'a').toLowerCase()` results in "banana" in JavaScript. It's a play on string concatenation and type coercion where the unary plus operator attempts to convert 'a' to a number, leading to `NaN`, and the rest is string concatenation followed by converting to lowercase.
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+## Technologies Used
+
+- Vue.js (version 3.3.10)
+- Bootstrap (version 4.4.1)
+
+## Setup and Execution
+
+To run this project locally:
+
+1. **Download the Code**: Clone or download the repository to your local machine.
+2. **Install Dependencies**: Run `npm install` to install required npm packages.
+3. **Install Specific Bootstrap Version**: Execute `npm i bootstrap@4.4.1` to install Bootstrap version 4.4.1.
+4. **Start the Application**: Use `npm run dev` in the terminal to run the application in your local environment.
