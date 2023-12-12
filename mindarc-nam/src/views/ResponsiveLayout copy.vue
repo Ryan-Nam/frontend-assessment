@@ -1,14 +1,53 @@
+<script setup>
+import { ref } from 'vue';
+
+const bannerImage = ref(window.innerWidth >= 768 ? '1920X650' : '600x600');
+
+const contentItems = ref([
+    { image: '400x300', title: 'Title 1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', link: 'Link 1' },
+    { image: '400x300', title: 'Title 2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', link: 'Link 2' },
+    { image: '400x300', title: 'Title 3', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', link: 'Link 3' }
+]);
+
+
+window.addEventListener('resize', () => {
+    bannerImage.value = window.innerWidth >= 768 ? '1920X650' : '600x600';
+});
+</script>
+
+
 <template>
     <main role="main">
-        <MainBanner />
-        <ContentList />
+        <section class="main-banner">
+            <div class="mindarc-hero" :style="{ backgroundImage: `url(https://via.placeholder.com/${bannerImage})` }">
+                <div class="container">
+                    <h1 class="mindarc-heading">Hello Developer!</h1>
+                    <h3 class="mindarc-subheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row text-center mb-3 equal-height">
+                    <div class="col-md-4 mb-4" v-for="item in contentItems" :key="item.title">
+                        <div class="mindarc-shadow content-wrapper rounded">
+                            <div class="content-area p-3">
+                                <ul>
+                                    <img :src="`https://via.placeholder.com/${item.image}`" :alt="item.title"
+                                        class="content-block__image rounded">
+                                    <li class="content-block__text">{{ item.description }}</li>
+                                </ul>
+                            </div>
+                            <div class="mindarc-button__bottom">
+                                <button class="mindarc-button" :href="item.link" role="button">Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
-
-<script setup>
-import MainBanner from '../components/MainBanner.vue';
-import ContentList from '../components/ContentList.vue';
-</script>
 
 
 <style>
